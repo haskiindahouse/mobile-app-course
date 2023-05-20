@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
     private fun showDescription() {
         // Получаем выбранный знак Зодиака из списка
         val selectedZodiac = zodiacSpinner.selectedItem.toString()
-
+        var badDescription = resources.getStringArray(R.array.horoscope_descrtiptions)
+        //badDescription.get)
         // Получаем характеристику для выбранного знака Зодиака
         val description = when (selectedZodiac) {
             "Овен" -> "Характеристика для знака Овен"

@@ -9,7 +9,7 @@ import android.widget.Toast
 import android.view.View
 import android.content.Intent
 class MainActivity : AppCompatActivity() {
-    private val words = arrayOf("кот", "молоко", "человек", "дом", "река", "звезда")
+    private val words = arrayOf("test1", "test2", "test3", "test4", "test5", "test6")
     private lateinit var secretWord: String
     private var attemptCount = 0
     private fun generateSecretWord(): String {
@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         var bulls = 0
         var cows = 0
 
+        // comment:
+        // test <-> est1
         for (i in secretWord.indices) {
             if (guessWord[i] == secretWord[i]) {
                 bulls++
@@ -38,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         if (bulls == secretWord.length) {
             val successTextView: TextView = findViewById(R.id.textView3)
-            successTextView.text = "Вы отгадал загаданное слово в игре 'Быки и коровы' за $attemptCount попыток!"
+            successTextView.text = "Вы отгадали загаданное слово в игре 'Быки и коровы' за $attemptCount попыток!"
             val ResetButton: Button = findViewById(R.id.button2)
             ResetButton.setVisibility(View.VISIBLE)
             val PodButton: Button = findViewById(R.id.button3)

@@ -84,8 +84,6 @@ class MainActivity : AppCompatActivity() {
             val commonNum1 = num1 * (lcm / den1)
             val commonNum2 = num2 * (lcm / den2)
 
-
-
             // Вычитаем числители
             val resultNum = commonNum1 - commonNum2
 
@@ -190,8 +188,8 @@ class MainActivity : AppCompatActivity() {
                 val numerator = numerator.toInt()
                 val denominator = denominator.toInt()
 
-                if (numerator == 0 || denominator == 0) {
-                    Toast.makeText(this, "Деление на ноль невозможно", Toast.LENGTH_SHORT).show()
+                if (denominator == 0) {
+                    Toast.makeText(this, "Cannot divide by zero", Toast.LENGTH_SHORT).show()
                 }
                 else{
                     val result1 = numerator.toDouble() / denominator.toDouble() + integer
